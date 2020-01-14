@@ -18,6 +18,16 @@ const padding = () => {
   `;
 };
 
+const borderRadius = () => {
+  return css`
+    border-radius: 8px;
+
+    &.of-size--xsmall {
+      border-radius: 6px;
+    }
+  `;
+};
+
 const fontSize = () => {
   return css`
     font-size: 16px;
@@ -130,7 +140,7 @@ const baseButtonStyles = () => css`
   box-sizing: border-box;
   padding: 12px 14px;
   text-decoration: none;
-  border-radius: 8px;
+  ${borderRadius()}
   -webkit-font-smoothing: antialiased;
   -webkit-touch-callout: none;
   user-select: none;

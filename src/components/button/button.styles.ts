@@ -73,11 +73,19 @@ function baseVariant(name: IButtonVariant) {
       color: ${background.base} !important;
     }
 
+    &:hover {
+      box-shadow: 0 2px 5px ${transparentize(0.85, background.base)};
+      border-color: ${background.active};
+    }
+
+    &:focus {
+      box-shadow: ${transparentize(0.3, '#2fa8ff')} 0 0 0 3px, 0 2px 5px ${transparentize(0.85, background.base)};
+    }
+
     &:hover,
     &:focus {
       background: ${background.active};
       border-color: ${background.active};
-      box-shadow: 0 2px 5px ${transparentize(0.85, background.base)};
 
       &.is-ghost {
         box-shadow: 0 0 5px ${transparentize(0.85, background.base)},
